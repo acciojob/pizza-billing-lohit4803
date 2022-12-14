@@ -27,6 +27,7 @@ public class Pizza
             this.carryBag = 20;
             this.extraToppings = 70;
             p2 = 70;
+
         }
         else
         {
@@ -38,6 +39,7 @@ public class Pizza
             this.extraToppings = 120;
             p2 = 120;
         }
+        this.bill = "Base Price Of The Pizza: "+this.price + "\n";
     }
 
     public int getPrice()
