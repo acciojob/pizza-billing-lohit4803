@@ -6,6 +6,8 @@ public class Pizza
     private int price;
     int c = 1;
     int c1 =1;
+    int c2 =1;
+    int c3 = 1;
     int p1;
     int p2;
     private Boolean isVeg;
@@ -68,15 +70,32 @@ public class Pizza
 
     public void addTakeaway()
     {
-        price+=carryBag;
+        if(c2 == 1) {
+            price += carryBag;
+            c2--;
+        }
     }
 
     public String getBill()
     {
-        return "Base Price Of The Pizza:" +p1"+\n"+
-        "Extra Cheese Added:"+ extraCheese+"\n"+
-        "Extra Toppings Added:" +p2"\n"+
-        "Paperbag Added:"+ carryBag+"\n"+
-        "Total Price:" +price;
+        if(c3 == 1)
+        {
+            c3 = 0;
+
+            if(c == 0)
+            {
+                this.bill = this.bill + "Extra Cheese Added: " + this.extraCheese + "\n";
+            }
+            if(c1 == 0)
+            {
+                this.bill = this.bill + "Extra Toppings Added: " + this.extraToppings + "\n";
+            }
+            if(c2 == 0)
+            {
+                this.bill = this.bill + "Paperbag Added: " + this.carryBag + "\n";
+            }
+            this.bill = this.bill + "Total Price: "+this.price + "\n";
+        }
+        return this.bill;
     }
 }
