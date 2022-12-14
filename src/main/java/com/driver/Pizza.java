@@ -73,10 +73,10 @@ public class Pizza
 
     public String getBill()
     {
-        return "Base Price Of The Pizza": p1"\n"
-        "Extra Cheese Added": extraCheese"\n"
-        "Extra Toppings Added": p2"\n"
-        "Paperbag Added": carryBag"\n"
-        "Total Price": price;
+        return "Base Price Of The Pizza:" +p1"+\n"+
+        "Extra Cheese Added:"+ extraCheese+"\n"+
+        "Extra Toppings Added:" +p2"\n"+
+        "Paperbag Added:"+ carryBag+"\n"+
+        "Total Price:" +price;
     }
 }
